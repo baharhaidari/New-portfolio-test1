@@ -1,0 +1,32 @@
+.filter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.filter__container span {
+  font-size: 1.4rem;
+  padding: 0.3rem;
+  list-style-type: none;
+  transition: all ease-in-out 0.3s;
+}
+
+.filter__container span:hover {
+  cursor: pointer;
+  color: blueviolet;
+}
+
+.filter__container span.active {
+  color: blueviolet;
+}
+
+@media screen and (max-width: 768px) {
+  .filter__container {
+    gap: 1rem;
+  }
+
+  .filter__container span {
+    font-size: 1.1rem;
+  }
+}

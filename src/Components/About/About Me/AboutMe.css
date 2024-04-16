@@ -1,0 +1,217 @@
+.about__me {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about__me h1 {
+  font-size: 3.3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info__wrapper {
+  display: flex;
+  gap: 5rem;
+}
+
+.about__img__container {
+  position: relative;
+  display: inline-block;
+  -webkit-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.about__img__container img {
+  min-width: 15rem;
+  min-height: 15rem;
+  max-width: 26rem;
+  max-height: 26rem;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.8s;
+  display: block;
+}
+
+.about__img__overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.about__img__container:hover img {
+  transform: scale(1.07);
+}
+
+.about__img__container:hover .about__img__overlay {
+  opacity: 1;
+}
+
+.about__img__overlay .about__img__paragraph {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.about__img__overlay .about__img__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.4rem;
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: 0.3s all ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__img__overlay .about__img__button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100%;
+  animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  35% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.about__img__overlay .about__img__button:hover::before {
+  left: 100%;
+}
+
+.about__img__overlay .about__img__button:hover {
+  letter-spacing: 1.4px;
+}
+
+.about__img__overlay .about__img__icon {
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+}
+
+.about__img__container:hover .about__img__overlay {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.info__wrapper p {
+  font-size: 1.4rem;
+}
+
+.about__info .name {
+  color: blueviolet;
+  font-size: 2.2rem;
+  font-family: cursive;
+  font-weight: 800;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hobbies__title {
+  font-size: 1.9rem;
+  margin: 1.8rem 0 1rem 0;
+}
+
+.about__contact__info {
+  font-size: 1.3rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.about__contact__info li span {
+  color: blueviolet;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.opacity {
+  opacity: 0;
+  animation: opacity 1.4s ease-in-out infinite;
+  padding: 0.2rem;
+  letter-spacing: 0.5px;
+  color: black !important;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__wrapper {
+    flex-direction: column;
+  }
+
+  .about__me h1 {
+    margin-top: 4rem;
+  }
+}

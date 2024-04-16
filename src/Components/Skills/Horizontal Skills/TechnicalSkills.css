@@ -1,0 +1,126 @@
+.bar {
+  margin: 20px auto;
+}
+
+.bar:first-child {
+  margin-top: 0;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.label span {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.skills {
+  padding-top: 5rem;
+}
+
+.skill-title {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.progress-line {
+  height: 9px;
+  width: 100%;
+  position: relative;
+  transform: scaleX(1);
+  border-radius: 10px;
+}
+
+.progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(to right, rgba(137, 43, 226, 0.253), blueviolet);
+  animation: progressBar 4s cubic-bezier(0, 0, 0, 1) forwards;
+}
+
+/* bar width */
+
+.progress-line.js span {
+  width: 90%;
+}
+.progress-line.react span {
+  width: 85%;
+}
+.progress-line.boot span {
+  width: 95%;
+}
+.progress-line.hc span {
+  width: 95%;
+}
+.progress-line.java span {
+  width: 90%;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  right: -10px;
+  height: 0;
+  width: 0;
+  border-left: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 8px solid #000;
+  transform: translateX(50deg);
+  opacity: 0;
+  animation: percentage 0.3s 2s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -35px;
+  right: -30px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  padding: 1px 6px;
+  font-size: 12px;
+  border-radius: 8px;
+  opacity: 0;
+  animation: percentage 0.3s 2s linear forwards;
+}
+
+.progress-line.js span::after {
+  content: "85%";
+}
+.progress-line.react span::after {
+  content: "80%";
+}
+.progress-line.boot span::after {
+  content: "95%";
+}
+.progress-line.hc span::after {
+  content: "98%";
+}
+.progress-line.java span::after {
+  content: "65%";
+}
+
+@keyframes progressBar {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes percentage {
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}

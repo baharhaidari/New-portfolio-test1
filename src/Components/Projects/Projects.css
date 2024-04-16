@@ -1,0 +1,35 @@
+.projects {
+  min-height: 100vh;
+  padding: 4rem 9% 6rem 9%;
+}
+
+.projects h1 {
+  font-size: 3.3rem;
+  text-align: center;
+}
+
+.search__filter {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+button.slick-arrow::before {
+  color: blueviolet !important;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    min-height: 70vh;
+  }
+
+  .search__filter {
+    display: block;
+  }
+
+  .projects h1 {
+    font-size: 2.4rem;
+  }
+}

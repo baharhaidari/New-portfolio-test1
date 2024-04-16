@@ -1,0 +1,40 @@
+.skills {
+  padding: 0rem 9% 6rem 9%;
+  background-color: aliceblue;
+}
+
+.skill-title h1 {
+  font-size: 3.3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills li {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.progress-line {
+  height: 20px;
+  background-color: rgb(172, 169, 181);
+  position: relative;
+  transform: scaleX(1);
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: block;
+  }
+
+  .skill-title h1 {
+    font-size: 2.4rem;
+  }
+}
