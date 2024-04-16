@@ -109,7 +109,7 @@ export default function Projects() {
 
   return (
     <section className="projects">
-      <h1>My Projects</h1>
+      <h1>My Projects_</h1>
 
       <div className="search__filter">
         <ProjectFilters
